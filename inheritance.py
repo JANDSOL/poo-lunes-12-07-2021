@@ -28,10 +28,14 @@ class Person:
 
     def __capital_name(self, name):
         return name.upper()
+    
+    def show_data(self):
+        return 'Código: {} - Nombre: {} - Activo: {}'\
+                .format(self.code, self.name, self.active)
+
 
 if __name__ == '__main__':
     per1 = Person()
-    print(per1.name)
-    # print(per1.__capital_name('Juan'))
+    print(per1.show_data())
     per2 = Person('Daniel', False)
-    print(per2.name, per2.active)
+    print(per2.show_data())
